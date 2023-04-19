@@ -8,6 +8,7 @@ const Main = () => {
     <div>
       <h3>Hi This is Main</h3>
       <Link to="/characters">Characters</Link>
+      <Link to="/comics">Comics</Link>
     </div>
   );
 };

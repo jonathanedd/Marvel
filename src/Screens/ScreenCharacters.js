@@ -1,5 +1,11 @@
 import React from "react";
 import axios from "axios";
+import "../Styles/screencharacters.css";
+
+import { Link } from "react-router-dom";
+
+//Icons
+import { MdFavorite } from "react-icons/md";
 
 //hooks
 import { useEffect, useState } from "react";
@@ -21,17 +27,26 @@ const ScreenCharacters = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Marvel</h1>
-      {characters.map((character) => (
-        <div key={character.id}>
-          <h3>Name: {character.name}</h3>
-          <img
-            src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
-            alt=""
-          />
-        </div>
-      ))}
+    <div className="characters-main">
+      <Link to="/">Back</Link>
+      <h1>Characters</h1>
+
+      <div className="character-cards">
+        {characters.map((character) => (
+          <div className="character-card" key={character.id}>
+            <img
+              src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
+              alt=""
+            />
+            <h3>Name: {character.name}</h3>
+            <Link>
+              <MdFavorite />
+            </Link>
+
+            <span>Story: {character.stories.items[0]?.name}</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

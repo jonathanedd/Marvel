@@ -1,0 +1,19 @@
+.comic-cards {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  justify-content: center;
+}
+
+.comic-card {
+  align-items: center;
+  background-color: white;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  padding: 2rem;
+}
+
+.comic-card img {
+  width: 250px;
+  height: 250px;
+  border-radius: 0.5rem;
+}
