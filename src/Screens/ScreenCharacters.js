@@ -2,13 +2,12 @@ import React from "react";
 import axios from "axios";
 import "../Styles/screencharacters.css";
 
-import { Link } from "react-router-dom";
-
 //Icons
 import { MdFavorite } from "react-icons/md";
 
 //hooks
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const ScreenCharacters = () => {
   const [characters, setCharacters] = useState([]);

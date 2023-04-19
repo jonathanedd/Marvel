@@ -1,10 +1,6 @@
 .characters-main {
   width: 90%;
   margin: auto;
-  background-color: black;
-}
-.characters-main h1 {
-  color: aliceblue;
 }
 
 .character-cards {

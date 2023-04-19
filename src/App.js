@@ -11,8 +11,9 @@ function App() {
       <HashRouter>
         <Routes>
           <Route path="/" element={<Main />} />
+
           <Route path="/characters" element={<ScreenCharacters />} />
-          <Route path="/comics" element={<ScreenComics/>} />
+          <Route path="/comics" element={<ScreenComics />} />
         </Routes>
       </HashRouter>
     </div>

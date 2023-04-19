@@ -3,6 +3,7 @@ import axios from "axios";
 import "../Styles/screencomics.css";
 //Hooks
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const ScreenComics = () => {
   const [comics, setComics] = useState([]);
@@ -22,6 +23,7 @@ const ScreenComics = () => {
 
   return (
     <div className="comics-main">
+      <Link to="/">Back</Link>
       <h1>Comics</h1>
       <div className="comic-cards">
         {comics.map((comic) => (

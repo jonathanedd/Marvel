@@ -1,7 +1,7 @@
 .comics-main {
   width: 90%;
   margin: auto;
-  background-color: black;
+  /* background-color: black; */
 }
 
 .comic-cards {
@@ -19,8 +19,8 @@
 }
 
 .comic-card img {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 350px;
   border-radius: 0.5rem;
 }
 
