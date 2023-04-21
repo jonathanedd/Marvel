@@ -20,14 +20,16 @@ const Main = () => {
       <div className="main-img"></div>
 
       <div className="upper-bar">
-        <Link to="/">
-          <img src={logo} alt="" />
-        </Link>
+        <h1 className="main-title">
+          Welcome to the amazing universe of Marvel
+        </h1>
         <form action="">
           <input className="input" type="text" placeholder="Search" />
           <AiOutlineSearch />
         </form>
-        <h1 className="main-title">Welcome to the amazing universe of</h1>
+        <Link to="/">
+          <img src={logo} alt="" />
+        </Link>
       </div>
 
       <div className="main-cards">
