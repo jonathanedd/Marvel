@@ -5,6 +5,8 @@ import ScreenCharacters from "./Screens/ScreenCharacters";
 import Main from "./Components/Main";
 import ScreenComics from "./Screens/ScreenComics";
 
+import ScreenSeries from "./Screens/ScreenSeries";
+
 function App() {
   return (
     <div className="App">
@@ -14,6 +16,7 @@ function App() {
 
           <Route path="/characters" element={<ScreenCharacters />} />
           <Route path="/comics" element={<ScreenComics />} />
+          <Route path="/stories" element={<ScreenSeries />} />
         </Routes>
       </HashRouter>
     </div>

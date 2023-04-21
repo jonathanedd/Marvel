@@ -14,7 +14,7 @@ const ScreenComics = () => {
       )
       .then((res) => {
         setComics(res.data.data.results);
-        console.log(res.data.data.results);
+        // console.log(res.data.data.results);
       })
       .catch((error) => {
         console.log(error);
