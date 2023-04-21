@@ -16,7 +16,7 @@ function App() {
 
           <Route path="/characters" element={<ScreenCharacters />} />
           <Route path="/comics" element={<ScreenComics />} />
-          <Route path="/stories" element={<ScreenSeries />} />
+          <Route path="/series" element={<ScreenSeries />} />
         </Routes>
       </HashRouter>
     </div>

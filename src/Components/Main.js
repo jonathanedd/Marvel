@@ -46,6 +46,11 @@ const Main = () => {
             <h3>Comics</h3>
           </Link>
         </div>
+        <div>
+          <Link to="/series">
+          <h3>Series</h3>
+          </Link>
+        </div>
       </div>
     </div>
   );
