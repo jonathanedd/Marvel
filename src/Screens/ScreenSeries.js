@@ -12,13 +12,14 @@ const ScreenSeries = () => {
         "https://gateway.marvel.com:443/v1/public/series?ts=1&apikey=617e862772b3ae26bf7f8809a8ed6f70&hash=dfce4b5bb164d2c4747d086d4f77c326"
       )
       .then((res) => {
-        console.log(res.data.data.results);
+        // console.log(res.data.data.results);
         setSeries(res.data.data.results);
       })
       .catch((error) => {
         console.log(error);
       });
   }, []);
+
   return (
     <div>
       <h3>Series</h3>

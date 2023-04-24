@@ -20,7 +20,7 @@ const ScreenComics = () => {
         console.log(error);
       });
   }, []);
-
+  console.log(comics);
   return (
     <div className="comics-main">
       <Link to="/">Back</Link>
