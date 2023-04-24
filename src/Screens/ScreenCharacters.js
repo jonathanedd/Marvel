@@ -1,9 +1,11 @@
 import React from "react";
 import axios from "axios";
+import logo from "../Images/logo.png";
 import "../Styles/screencharacters.css";
 
 //Icons
 import { MdFavorite } from "react-icons/md";
+import { HiOutlineArrowLeft } from "react-icons/hi";
 
 //hooks
 import { useEffect, useState } from "react";
@@ -27,8 +29,15 @@ const ScreenCharacters = () => {
 
   return (
     <div className="characters-main">
-      <Link to="/">Back</Link>
-      <h1>Characters</h1>
+      <div className="upper-bar">
+        <Link to="/">
+          <HiOutlineArrowLeft className="characters-icon" />
+        </Link>
+        <h1>Characters</h1>
+        <Link to="/">
+          <img src={logo} alt="" />
+        </Link>
+      </div>
 
       <div className="character-cards">
         {characters.map((character) => (
@@ -39,10 +48,10 @@ const ScreenCharacters = () => {
             />
             <h3>Name: {character.name}</h3>
             <Link>
-              <MdFavorite />
+              <MdFavorite className="characters-icon" />
             </Link>
 
-            <span>Story: {character.stories.items[0]?.name}</span>
+            {/* <span>Story: {character.stories.items[0]?.name}</span> */}
           </div>
         ))}
       </div>

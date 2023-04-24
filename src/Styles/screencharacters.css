@@ -1,8 +1,18 @@
 .characters-main {
-  width: 90%;
+  width: 100%;
   margin: auto;
+  background-image: url("../Images/backgroundTexture.png");
+  background-size: contain;
+  background-color: #181614f1;
 }
-
+.upper-bar h1 {
+  color: #ff6200;
+}
+.characters-icon {
+  color: #ff6200;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
 .character-cards {
   display: grid;
   grid-template-columns: 30% 30% 30%;
@@ -11,8 +21,10 @@
 
 .character-card {
   align-items: center;
-  background-color: white;
+  background-color: #000000;
   border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
   margin: 1rem;
   padding: 2rem;
 }
@@ -27,4 +39,20 @@
   transform: scale(1.1);
   transition: all ease 0.5s;
   box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.973);
+}
+.character-card h3 {
+  color: #ff6200;
+}
+.character-card span {
+  color: #ff6200;
+}
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 768px){
+  .character-cards {
+    display: flex;
+    flex-direction: column;
+  }
 }
