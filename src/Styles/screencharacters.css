@@ -21,7 +21,7 @@
 
 .character-card {
   align-items: center;
-  background-color: #000000;
+  background-color: #000000af;
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -47,10 +47,9 @@
   color: #ff6200;
 }
 
-
 /* MEDIA QUERIES */
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
   .character-cards {
     display: flex;
     flex-direction: column;
