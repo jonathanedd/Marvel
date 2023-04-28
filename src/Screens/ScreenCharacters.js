@@ -10,22 +10,25 @@ import { HiOutlineArrowLeft } from "react-icons/hi";
 //hooks
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+// import Main from "../Components/Main";
 
 const ScreenCharacters = () => {
   const [characters, setCharacters] = useState([]);
+
   useEffect(() => {
     axios
       .get(
         "https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=617e862772b3ae26bf7f8809a8ed6f70&hash=dfce4b5bb164d2c4747d086d4f77c326"
       )
       .then((res) => {
-        // console.log(res.data.data.results);
         setCharacters(res.data.data.results);
       })
       .catch((error) => {
         console.log(error);
       });
   }, []);
+
+  console.log(characters);
 
   return (
     <div className="characters-main">
@@ -47,11 +50,11 @@ const ScreenCharacters = () => {
               alt=""
             />
             <h3>Name: {character.name}</h3>
+            <span>Story: {character.stories.items[0]?.name}</span>
+
             <Link>
               <MdFavorite className="characters-icon" />
             </Link>
-
-            {/* <span>Story: {character.stories.items[0]?.name}</span> */}
           </div>
         ))}
       </div>

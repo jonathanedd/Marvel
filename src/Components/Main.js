@@ -4,32 +4,41 @@ import charactersImg from "../Images/charactersImg.jpg";
 import comicsImg from "../Images/comicsImg.jpg";
 import seriesImg from "../Images/seriesImg.jpg";
 import logo from "../Images/logo.png";
-
-//hooks
-// import { useState } from "react";
-
-//React router dom
+import { useState } from "react";
 import { Link } from "react-router-dom";
-//icons
 import { AiOutlineSearch } from "react-icons/ai";
 
 const Main = () => {
-  // const [search, setSearch] = useState("");
+  const [searchChange, setSearchChange] = useState("");
+  // const [search, setSearch] = useState([]);
+
+  // const search = props.characters;
+
+  const handleChange = (e) => {
+    setSearchChange(e.target.value);
+    console.log(searchChange);
+  };
+  const handleSearch = () => {
+    // console.log(search.name);
+    console.log("Me ejecute");
+  };
   return (
     <div className="main">
       <div className="main-img"></div>
 
       <div className="upper-bar">
         <h1 className="main-title">Jhonatan Ordonez</h1>
-        <form action="">
+
+        <form>
           <input
             className="input"
+            onChange={handleChange}
             type="text"
             placeholder="Search by Characters, comics or series"
           />
-
-          <AiOutlineSearch className="search-icon" />
+          <AiOutlineSearch className="search-icon" onClick={handleSearch} />
         </form>
+
         <Link to="/">
           <img src={logo} alt="" />
         </Link>
