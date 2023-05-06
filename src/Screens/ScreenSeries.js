@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import "../Styles/screenseries.css";
 
 //Hooks
 import { useEffect, useState } from "react";
@@ -21,12 +22,12 @@ const ScreenSeries = () => {
   }, []);
 
   return (
-    <div>
+    <div className="series-main">
       <h3>Series</h3>
 
-      <div>
+      <div className="series-cards">
         {series.map((serie) => (
-          <div key={serie.id}>
+          <div className="series-card" key={serie.id}>
             <span>{serie.title}</span>
             <img
               src={`${serie.thumbnail.path}.${serie.thumbnail.extension}`}

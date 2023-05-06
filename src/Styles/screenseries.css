@@ -1,0 +1,27 @@
+.series-main {
+  width: 100%;
+  margin: auto;
+  background-image: url("../Images/backgroundTexture.png");
+  background-size: contain;
+  background-color: #181614f1;
+}
+.series-cards {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  justify-content: center;
+}
+.series-card {
+  align-items: center;
+  background-color: #00000065;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  padding: 2rem;
+}
+.series-card img {
+  width: 300px;
+  height: 350px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
