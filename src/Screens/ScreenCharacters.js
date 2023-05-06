@@ -1,15 +1,15 @@
 import React from "react";
 import axios from "axios";
-import logo from "../Images/logo.png";
+
 import "../Styles/screencharacters.css";
 
 //Icons
 import { MdFavorite } from "react-icons/md";
-import { HiOutlineArrowLeft } from "react-icons/hi";
 
 //hooks
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Nav from "../Components/Nav";
 // import Main from "../Components/Main";
 
 const ScreenCharacters = () => {
@@ -28,20 +28,9 @@ const ScreenCharacters = () => {
       });
   }, []);
 
-  console.log(characters);
-
   return (
     <div className="characters-main">
-      <div className="upper-bar">
-        <Link to="/">
-          <HiOutlineArrowLeft className="characters-icon" />
-        </Link>
-        <h1>Characters</h1>
-        <Link to="/">
-          <img src={logo} alt="" />
-        </Link>
-      </div>
-
+      <Nav />
       <div className="character-cards">
         {characters.map((character) => (
           <div className="character-card" key={character.id}>

@@ -1,14 +1,13 @@
 import React from "react";
 import axios from "axios";
 import "../Styles/screencomics.css";
-import logo from "../Images/logo.png";
 
 //Hooks
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import { HiOutlineArrowLeft } from "react-icons/hi";
 import { MdFavorite } from "react-icons/md";
+import Nav from "../Components/Nav";
 
 const ScreenComics = () => {
   const [comics, setComics] = useState([]);
@@ -19,7 +18,7 @@ const ScreenComics = () => {
       )
       .then((res) => {
         setComics(res.data.data.results);
-        console.log(res.data.data);
+        // console.log(res.data.data);
       })
       .catch((error) => {
         console.log(error);
@@ -28,16 +27,7 @@ const ScreenComics = () => {
 
   return (
     <div className="comics-main">
-      <div className="upper-bar">
-        <Link to="/">
-          <HiOutlineArrowLeft className="characters-icon" />
-        </Link>
-        <h1>Comics</h1>
-        <Link to="/">
-          <img src={logo} alt="" />
-        </Link>
-      </div>
-
+      <Nav />
       <div className="comic-cards">
         {comics.map((comic) => (
           <div className="comic-card" key={comic.id}>
