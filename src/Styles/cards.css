@@ -42,4 +42,8 @@
     display: grid;
     grid-template-columns: 100%;
   }
+  .card {
+    margin: auto;
+    margin-bottom: 20px;
+  }
 }
