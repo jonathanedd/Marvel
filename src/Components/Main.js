@@ -22,6 +22,7 @@ const Main = () => {
   };
 
   console.log(characters);
+
   useEffect(() => {
     marvelApi();
   }, []);
@@ -30,8 +31,9 @@ const Main = () => {
     <>
       <div className="search">
         <h3>Search for your fav Hero</h3>
-        <form action="">
+        <form>
           <input type="text" placeholder="Type here" />
+          <button type="submit">Submit</button>
         </form>
       </div>
 
