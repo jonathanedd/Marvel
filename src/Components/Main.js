@@ -1,72 +1,42 @@
+import axios from "axios";
 import React from "react";
+import Cards from "./Cards";
 import "../Styles/main.css";
-import charactersImg from "../Images/charactersImg.jpg";
-import comicsImg from "../Images/comicsImg.jpg";
-import seriesImg from "../Images/seriesImg.jpg";
-import logo from "../Images/logo.png";
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { AiOutlineSearch } from "react-icons/ai";
+
+import { useState, useEffect } from "react";
 
 const Main = () => {
-  const [searchChange, setSearchChange] = useState("");
-  // const [search, setSearch] = useState([]);
+  const [characters, setCharacters] = useState();
 
-  // const search = props.characters;
+  const marvelApi = () => {
+    axios
+      .get(
+        `https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=617e862772b3ae26bf7f8809a8ed6f70&hash=dfce4b5bb164d2c4747d086d4f77c326`
+      )
+      .then((res) => {
+        setCharacters(res.data.data.results);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
-  const handleChange = (e) => {
-    setSearchChange(e.target.value);
-    console.log(searchChange);
-  };
-  const handleSearch = () => {
-    // console.log(search.name);
-    console.log("Me ejecute");
-  };
+  console.log(characters);
+  useEffect(() => {
+    marvelApi();
+  }, []);
+
   return (
-    <div className="main">
-      <div className="main-img"></div>
-
-      <div className="upper-bar">
-        <h1 className="main-title">Jhonatan Ordonez</h1>
-
-        <form>
-          <input
-            className="input"
-            onChange={handleChange}
-            type="text"
-            placeholder="Search by Characters, comics or series"
-          />
-          <AiOutlineSearch className="search-icon" onClick={handleSearch} />
+    <>
+      <div className="search">
+        <h3>Search for your fav Hero</h3>
+        <form action="">
+          <input type="text" placeholder="Type here" />
         </form>
-
-        <Link to="/">
-          <img src={logo} alt="" />
-        </Link>
       </div>
 
-      <div className="main-cards">
-        <div className="card">
-          <Link style={{ textDecoration: "none" }} to="/characters">
-            <img src={charactersImg} alt="" />
-            <h3>Characters</h3>
-          </Link>
-        </div>
-
-        <div className="card">
-          <Link style={{ textDecoration: "none" }} to="/comics">
-            <img src={comicsImg} alt="" />
-            <h3>Comics</h3>
-          </Link>
-        </div>
-
-        <div className="card">
-          <Link style={{ textDecoration: "none" }} to="/series">
-            <img src={seriesImg} alt="" />
-            <h3>Series</h3>
-          </Link>
-        </div>
-      </div>
-    </div>
+      {characters ? <Cards characters={characters} /> : "Hero not found"}
+    </>
   );
 };
 
