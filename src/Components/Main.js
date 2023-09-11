@@ -25,10 +25,6 @@ const Main = () => {
   // };
 
   useEffect(() => {
-    marvelApi();
-  }, [inputSearch]);
-
-  const marvelApi = () => {
     axios
       .get(`https://gateway.marvel.com:443/v1/public/characters`, {
         params: {
@@ -44,13 +40,14 @@ const Main = () => {
       .catch((err) => {
         console.log(err);
       });
-  };
+  }, [inputSearch]);
 
   console.log(characters);
 
   const handleSearch = (e) => {
     e.preventDefault();
     setInputSearch(e.target.value);
+
     console.log(inputSearch);
   };
 
