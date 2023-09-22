@@ -32,11 +32,25 @@
 }
 
 .card h2 {
-  color: #ffffff;
+  color: #7fdea4;
 
   text-align: left;
   font-size: 0.7rem;
 }
+
+.character-detail {
+  background-color: rgba(0, 0, 0, 0.849);
+  margin-top: 0;
+  position: absolute;
+  top: 0%;
+  left:5%;
+  margin: auto;
+  width: 90%;
+  /* height: max-content; */
+  
+}
+
+
 
 @media only screen and (max-width: 600px) {
   .cards {

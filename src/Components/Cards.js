@@ -1,9 +1,16 @@
 import React from "react";
+import { useState } from "react";
 import "../Styles/cards.css";
 
 import { motion } from "framer-motion";
+import CharacterDetail from "./CharacterDetail";
 
 const Cards = ({ characters }) => {
+  const [characterSelect, setCharacterSelect] = useState(null);
+
+  const handleCharacterClick = (character) => {
+    setCharacterSelect(character);
+  };
   return (
     <div className="cards">
       {characters.map((character) => (
@@ -26,12 +33,22 @@ const Cards = ({ characters }) => {
             <img
               src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
               alt=""
+              onClick={() => handleCharacterClick(character)}
             />
           </motion.div>
 
           <h2>{character.name}</h2>
         </motion.div>
       ))}
+
+      <div className="character-detail">
+        {characterSelect && (
+          <button onClick={() => setCharacterSelect(!characterSelect)}>
+            Cerrar
+          </button>
+        )}
+        {characterSelect && <CharacterDetail character={characterSelect} />}
+      </div>
     </div>
   );
 };

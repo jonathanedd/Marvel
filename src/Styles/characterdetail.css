@@ -1,0 +1,13 @@
+.character-detail-container{
+ display: flex;
+ color: aliceblue;
+}
+.image-detail img {
+  width: 400px;
+}
+
+.comics {
+  color: aliceblue;
+  text-align: left;
+  /* background-color: aqua; */
+}
