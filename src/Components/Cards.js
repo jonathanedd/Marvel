@@ -26,7 +26,7 @@ const Cards = ({ characters }) => {
           <motion.div
             whileHover={{
               scale: [1, 2, 2, 1, 1],
-              // rotate: 360,
+              rotate: 360,
               borderRadius: ["20%", "20%", "50%", "50%", "20%"],
             }}
           >
@@ -41,14 +41,14 @@ const Cards = ({ characters }) => {
         </motion.div>
       ))}
 
-      <div className="character-detail">
+      <motion.div className="character-detail">
         {characterSelect && (
           <button onClick={() => setCharacterSelect(!characterSelect)}>
             Cerrar
           </button>
         )}
         {characterSelect && <CharacterDetail character={characterSelect} />}
-      </div>
+      </motion.div>
     </div>
   );
 };

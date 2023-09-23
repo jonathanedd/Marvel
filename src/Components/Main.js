@@ -39,9 +39,9 @@ const Main = () => {
   };
 
   return (
-    <div>
+    <div className="main-container">
       <div className="search">
-        <h3>Type here and search for your favorite Marvel Hero</h3>
+        <h3>Find your favorite Marvel Hero</h3>
         <form onSubmit={handleSearch}>
           <input
             type="text"

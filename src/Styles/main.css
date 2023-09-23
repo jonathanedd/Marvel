@@ -3,12 +3,16 @@
 }
 
 .search h3 {
-  color: aliceblue;
+  color: #0ae40a;
 }
 
 .search input {
   width: 30%;
-  height: 30px;
+  height: 40px;
   margin: 10px;
+  padding: 10px;
   border-radius: 0.5rem;
+  color: #0ae40a;
+  border: 1px solid #0ae40a;
+  background-color: #040d12;
 }

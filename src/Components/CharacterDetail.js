@@ -15,34 +15,28 @@ const CharacterDetail = ({ character }) => {
         <p>{description || "No description available"}</p>
       </div>
 
-      <div className="comics">
+      <div className="api-detail">
         <h3>Comics:</h3>
         <ul>
           {comics.items.map((comic) => (
             <li key={comic.resourceURI}>{comic.name}</li>
           ))}
         </ul>
-      </div>
 
-      <div className="Series">
         <h3>Series:</h3>
         <ul>
           {series.items.map((serie) => (
             <li key={serie.resourceURI}>{serie.name}</li>
           ))}
         </ul>
-      </div>
 
-      <div className="Stories">
         <h3>Historias:</h3>
         <ul>
           {stories.items.map((story) => (
             <li key={story.resourceURI}>{story.name}</li>
           ))}
         </ul>
-      </div>
 
-      <div className="events">
         <h3>Eventos:</h3>
         <ul>
           {events.items.map((event) => (

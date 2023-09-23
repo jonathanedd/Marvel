@@ -1,13 +1,44 @@
-.character-detail-container{
- display: flex;
- color: aliceblue;
+.character-detail-container {
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+}
+
+.image-detail {
+  width: 50%;
 }
 .image-detail img {
   width: 400px;
+  height: 400px;
+  border-radius: 2rem;
 }
 
-.comics {
+.image-detail h2 {
+  color: #0ae40a;
+}
+
+.image-detail p {
+  color: #00D468;
+  font-weight: 100;
+}
+
+.api-detail {
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px solid #7fdea4;
+  border-radius: 1rem;
+  padding: 10px;
+  width: 30%;
   color: aliceblue;
   text-align: left;
-  /* background-color: aqua; */
+}
+.api-detail h3 {
+  font-size: 1.5rem;
+  color: #0ae40a;
+}
+.api-detail ul {
+  font-size: 0.8rem;
+  list-style: none;
+  color: #00D468;
 }
