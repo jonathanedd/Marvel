@@ -1,7 +1,5 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import "../Styles/cards.css";
-
 import { motion } from "framer-motion";
 import CharacterDetail from "./CharacterDetail";
 
@@ -11,6 +9,7 @@ const Cards = ({ characters }) => {
   const handleCharacterClick = (character) => {
     setCharacterSelect(character);
   };
+
   return (
     <div className="cards">
       {characters.map((character) => (
@@ -34,6 +33,7 @@ const Cards = ({ characters }) => {
               src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
               alt=""
               onClick={() => handleCharacterClick(character)}
+              className="character-image"
             />
           </motion.div>
 
@@ -41,14 +41,19 @@ const Cards = ({ characters }) => {
         </motion.div>
       ))}
 
-      <motion.div className="character-detail">
-        {characterSelect && (
-          <button onClick={() => setCharacterSelect(!characterSelect)}>
-            Cerrar
-          </button>
-        )}
-        {characterSelect && <CharacterDetail character={characterSelect} />}
-      </motion.div>
+      {characterSelect && (
+        <motion.div
+          className="character-detail"
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 100 }}
+        >
+          <div>
+            <button onClick={() => setCharacterSelect(null)}>Cerrar</button>
+          </div>
+          <CharacterDetail character={characterSelect} />
+        </motion.div>
+      )}
     </div>
   );
 };

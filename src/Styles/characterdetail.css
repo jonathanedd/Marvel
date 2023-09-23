@@ -18,7 +18,7 @@
 }
 
 .image-detail p {
-  color: #00D468;
+  color: #00d468;
   font-weight: 100;
 }
 
@@ -40,5 +40,25 @@
 .api-detail ul {
   font-size: 0.8rem;
   list-style: none;
-  color: #00D468;
+  color: #00d468;
+}
+
+@media only screen and (max-width: 600px) {
+  .character-detail-container {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 100%;
+  }
+  .image-detail {
+    width: 100%;
+  }
+  .image-detail img {
+    width: 250px;
+    height: 250px;
+  }
+  .api-detail {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+  }
 }
