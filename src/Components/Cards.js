@@ -3,6 +3,8 @@ import "../Styles/cards.css";
 import { motion } from "framer-motion";
 import CharacterDetail from "./CharacterDetail";
 
+import { RiArrowGoBackLine } from "react-icons/ri";
+
 const Cards = ({ characters }) => {
   const [characterSelect, setCharacterSelect] = useState(null);
 
@@ -49,7 +51,10 @@ const Cards = ({ characters }) => {
           exit={{ opacity: 0, y: 100 }}
         >
           <div>
-            <button onClick={() => setCharacterSelect(null)}>Cerrar</button>
+            <RiArrowGoBackLine
+              className="back-btn"
+              onClick={() => setCharacterSelect(null)}
+            />
           </div>
           <CharacterDetail character={characterSelect} />
         </motion.div>

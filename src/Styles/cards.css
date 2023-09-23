@@ -44,13 +44,14 @@
   width: 90%;
 }
 
-.character-detail button {
-  background-color: transparent;
+.back-btn {
   color: #0ae40a;
-  width: 80px;
-  height: 40px;
-  margin: 10px;
-  border-radius: 0.5rem;
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  display: flex;
 }
 
 @media only screen and (max-width: 600px) {

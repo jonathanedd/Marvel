@@ -5,7 +5,7 @@ import "../Styles/main.css";
 
 import { useState, useEffect } from "react";
 
-// import { calcLength } from "framer-motion";
+import logo from "../Images/logo.png";
 
 const Main = () => {
   const [characters, setCharacters] = useState("");
@@ -41,6 +41,8 @@ const Main = () => {
   return (
     <div className="main-container">
       <div className="search">
+        <img width="80px" src={logo} alt="" />
+
         <h3>Find your favorite Marvel Hero</h3>
         <form onSubmit={handleSearch}>
           <input
@@ -49,7 +51,6 @@ const Main = () => {
             onChange={(e) => setInputSearch(e.target.value)}
             value={inputSearch}
           />
-          {/* Botón eliminado  */}
         </form>
       </div>
 

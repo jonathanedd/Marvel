@@ -1,5 +1,10 @@
 .search {
   padding: 30px;
+  align-items: center;
+}
+
+.search img {
+  align-items: center;
 }
 
 .search h3 {
