@@ -44,6 +44,15 @@
   width: 90%;
 }
 
+.character-detail button {
+  background-color: transparent;
+  color: #0ae40a;
+  width: 80px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 0.5rem;
+}
+
 @media only screen and (max-width: 600px) {
   .cards {
     display: grid;

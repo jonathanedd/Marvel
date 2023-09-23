@@ -45,9 +45,8 @@
 
 @media only screen and (max-width: 600px) {
   .character-detail-container {
-    display: grid;
-    grid-template-rows: 50% 50%;
-    grid-template-columns: 100%;
+    display: flex;
+    flex-direction: column;
   }
   .image-detail {
     width: 100%;
